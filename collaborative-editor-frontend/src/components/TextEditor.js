@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { io } from "socket.io-client";
 import "./styles.css";
 
-const SERVER_URL = "http://localhost:5000";
+const SERVER_URL = process.env.REACT_APP_SERVER_URL || "";
 
 const TextEditor = () => {
   const [socket, setSocket] = useState(null);
